@@ -2,7 +2,7 @@ name: Sync multiple branches
 on:
   push:
     branches:
-      -  ${{ github.ref }}
+      -  '*'
 jobs:
   merge-branch:
     runs-on: ubuntu-latest
