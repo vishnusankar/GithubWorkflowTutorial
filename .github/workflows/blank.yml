@@ -8,11 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Merge staging -> uat
-        uses: devmasx/merge-branch@v1.3.0
+      - uses: everlytic/branch-merge@1.1.0
 
         with:
-          type: now
+          source_ref: release1
           target_branch: develop
           github_token: ${{ github.token }}
           commit_message_template: '[Automated] Merged {source_ref} into target {target_branch}'
