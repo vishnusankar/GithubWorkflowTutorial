@@ -1,17 +1,15 @@
-name: Sync multiple branches
+name: Follow Branch
 on:
   push:
     branches:
-      -  '*'
+      - develop
 jobs:
-  merge-branch:
+  run_action:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: everlytic/branch-merge@1.1.0
-
+      - name: Merge Follow Branch
+        uses: toysmoon/follow_branch@1.0.3
         with:
-          source_ref: release/v1
-          target_branch: develop
-          github_token: ${{ github.token }}
-          commit_message_template: '[Automated] Merged {source_ref} into target {target_branch}'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          target-branch: master
+          following-branch: develop
