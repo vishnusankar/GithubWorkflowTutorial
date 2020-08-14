@@ -2,7 +2,7 @@ name: Sync multiple branches
 on:
   push:
     branches:
-      - 'release/*'
+      -  ${{ github.ref }}
 jobs:
   merge-branch:
     runs-on: ubuntu-latest
@@ -12,6 +12,6 @@ jobs:
 
         with:
           source_ref: ${{ github.ref }}
-          target_branch: develop
+          target_branch: master
           github_token: ${{ github.token }}
           commit_message_template: '[Automated] Merged {source_ref} into target {target_branch}'
