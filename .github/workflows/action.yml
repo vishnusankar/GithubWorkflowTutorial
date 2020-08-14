@@ -1,0 +1,17 @@
+name: Sync multiple branches
+on:
+  push:
+    branches:
+      - 'release/*'
+jobs:
+  merge-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: everlytic/branch-merge@1.1.0
+
+        with:
+          source_ref: release1
+          target_branch: develop
+          github_token: ${{ github.token }}
+          commit_message_template: '[Automated] Merged {source_ref} into target {target_branch}'
