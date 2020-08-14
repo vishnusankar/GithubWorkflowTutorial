@@ -2,7 +2,7 @@ name: Sync multiple branches
 on:
   push:
     branches:
-      - release1
+      - '*'
 jobs:
   merge-branch:
     runs-on: ubuntu-latest
