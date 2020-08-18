@@ -1,8 +1,5 @@
 name: Follow Branch
-on:
-  push:
-    branches:
-      - develop
+on: [push]
 jobs:
   run_action:
     runs-on: ubuntu-latest
