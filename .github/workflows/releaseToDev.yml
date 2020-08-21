@@ -8,5 +8,5 @@ jobs:
         uses: toysmoon/follow_branch@1.0.3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          target-branch: master
-          following-branch: develop
+          target-branch: develop
+          following-branch: release/v1
