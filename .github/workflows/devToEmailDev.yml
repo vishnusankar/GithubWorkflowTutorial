@@ -1,7 +1,7 @@
 name: Follow Branch
-on:
- pull_request:
-     types: [assigned, opened, synchronize, reopened]
+on: 
+ pull_request_target:
+ types: [assigned, opened, synchronize, reopened]
 jobs:
   run_action:
     runs-on: ubuntu-latest
