@@ -26,4 +26,4 @@ jobs:
         source_branch: "develop"
         destination_repo: "https://github.com/vishnusankar/GithubWorkflowTutorial.git"
         destination_branch: "emailDev"
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+#         repo-token: ${{ secrets.GITHUB_TOKEN }}
