@@ -26,4 +26,4 @@ jobs:
         source_branch: "develop"
         destination_repo: "https://github.com/vishnusankar/GithubWorkflowTutorial.git"
         destination_branch: "emailDev"
-        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
