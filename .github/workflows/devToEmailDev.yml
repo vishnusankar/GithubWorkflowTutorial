@@ -22,8 +22,8 @@ jobs:
     - name: repo-sync
       uses: wei/git-sync@v2
       with:
-        source_repo: "https://github.com/vishnusankar/GithubWorkflowTutorial.git"
+        source_repo: "https://vishnusankar:6c371c734c4ef0e6de24f47e555dc6dda85820e0@github.com/vishnusankar/GithubWorkflowTutorial.git"
         source_branch: "develop"
-        destination_repo: "https://github.com/vishnusankar/GithubWorkflowTutorial.git"
+        destination_repo: "https://vishnusankar:6c371c734c4ef0e6de24f47e555dc6dda85820e0@github.com/vishnusankar/GithubWorkflowTutorial.git"
         destination_branch: "emailDev"
 #         repo-token: ${{ secrets.GITHUB_TOKEN }}
