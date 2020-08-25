@@ -22,8 +22,8 @@ jobs:
     - name: repo-sync
       uses: wei/git-sync@v2
       with:
-        source_repo: ""
+        source_repo: "https://github.com/vishnusankar/GithubWorkflowTutorial.git"
         source_branch: "develop"
-        destination_repo: ""
+        destination_repo: "https://github.com/vishnusankar/GithubWorkflowTutorial.git"
         destination_branch: "emailDev"
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
