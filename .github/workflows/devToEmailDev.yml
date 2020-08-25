@@ -1,29 +1,14 @@
 name: Follow Branch
-# on: 
-#  pull_request_target:
-#  types: [assigned, opened, synchronize, reopened]
-# jobs:
-#   run_action:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Merge Follow Branch
-#         uses: toysmoon/follow_branch@1.0.3
-#         with:
-#           github-token: ${{ secrets.GITHUB_TOKEN }}
-#           target-branch: emailDev
-#           following-branch: develop
-
-# vishnusankar:6c371c734c4ef0e6de24f47e555dc6dda85820e0
-on: push
+on: 
+ pull_request_target:
+ types: [assigned, opened, synchronize, reopened]
 jobs:
-  repo-sync:
+  run_action:
     runs-on: ubuntu-latest
     steps:
-    - name: repo-sync
-      uses: wei/git-sync@v2
-      with:
-        source_repo: "vishnusankar:6c371c734c4ef0e6de24f47e555dc6dda85820e0/GithubWorkflowTutorial"
-        source_branch: "develop"
-        destination_repo: "vishnusankar:6c371c734c4ef0e6de24f47e555dc6dda85820e0/GithubWorkflowTutorial"
-        destination_branch: "emailDev"
-#         repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Merge Follow Branch
+        uses: toysmoon/follow_branch@1.0.3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          target-branch: emailDev
+          following-branch: develop
