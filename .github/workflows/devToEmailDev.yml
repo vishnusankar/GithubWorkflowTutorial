@@ -8,8 +8,8 @@ on:
 jobs:
   run_action:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
     steps:
-      - if: github.event.pull_request.merged == true
       - name: Merge Follow Branch
         uses: toysmoon/follow_branch@1.0.3
         with:
