@@ -1,7 +1,5 @@
 name: Follow Branch
-on:  
-    pull_request:
-    types: [assigned, opened, synchronize, reopened]
+on: [pull_request]
 
 jobs:
   run_action:
